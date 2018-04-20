@@ -1,6 +1,9 @@
+cdlpt/
 material/
 node_modules/
-docs/
-!/src/docs/
-/img/private/
+src/
 cdlpt.zip
+gulpfile.js
+LICENSE
+package.json
+README.md
