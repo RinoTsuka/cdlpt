@@ -115,6 +115,7 @@ gulp.task('html', function(){
     .pipe(plumber({
       errorHandler: notify.onError('Error: <%= error.message %>')
     }))
+    .pipe(replace('<a href="#" class="download__button">ダウンロード</a>', '<a href="https://github.com/RinoTsuka/cdlpt/releases/download/' + pkg.version + '/cdlpt.zip" class="download__button">ダウンロード</a>'))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(docs))
     .pipe(browser.reload({stream:true}))
