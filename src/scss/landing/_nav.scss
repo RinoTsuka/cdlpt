@@ -1,0 +1,31 @@
+.nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  &__link {
+    position: absolute;
+    right: - $gutter * 3.5;
+    top:  - $gutter * 3.5;
+    background-color: $theme-color-5;
+    width: $gutter * 7;
+    height: $gutter * 7;
+    transition: 0.3s;
+    transform: rotate(45deg);
+    &:active {
+      background-color: $theme-color-6;
+    }
+    @include breakpoints-min(md) {
+      &:hover {
+        background-color: $theme-color-6;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 79%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 24px;
+  }
+}

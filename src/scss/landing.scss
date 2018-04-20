@@ -1,0 +1,31 @@
+@import "vendor/open-color";
+$theme-color-0: $oc-pink-0;
+$theme-color-1: $oc-pink-1;
+$theme-color-2: $oc-pink-2;
+$theme-color-3: $oc-pink-3;
+$theme-color-4: $oc-pink-4;
+$theme-color-5: $oc-pink-5;
+$theme-color-6: $oc-pink-6;
+$theme-color-7: $oc-pink-7;
+$theme-color-8: $oc-pink-8;
+$theme-color-9: $oc-pink-9;
+@import "variables";
+
+@import "mixins/breakpoints";
+@import "mixins/clearfix";
+@import "mixins/hover";
+
+@import "vendor/minireset";
+
+@import "landing/reboot";
+@import "landing/header";
+@import "landing/nav";
+@import "landing/eyecatch";
+@import "landing/intro";
+@import "landing/info";
+@import "landing/profile";
+@import "landing/sns";
+@import "landing/feature";
+@import "landing/download";
+@import "landing/more-theme";
+@import "landing/footer";

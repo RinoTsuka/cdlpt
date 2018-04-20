@@ -1,0 +1,6 @@
+.member {
+  padding-bottom: $gutter * 3;
+  @include breakpoints-min(lg) {
+    padding-bottom: $gutter * 5;
+  }
+}

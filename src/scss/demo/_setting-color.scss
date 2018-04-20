@@ -1,0 +1,110 @@
+.setting-color {
+  $element: &;
+  &__box {
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #999;
+    width: $gutter * 0.75;
+    height: 0;
+    margin-right: $gutter;
+    padding-top: $gutter * 0.75;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: $oc-gray-6;
+    margin-bottom: $gutter * 0.5;
+    width: calc(100% / 2);
+    @include breakpoints-min(sm) {
+      width: calc(100% / 3);
+    }
+    @include breakpoints-min(md) {
+      width: calc(100% / 5);
+    }
+    @include breakpoints-min(lg) {
+    }
+    &.gray {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-gray-7; }
+      }
+      #{$element}__box { background-color: $oc-gray-8; }
+    }
+    &.red {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-red-7; }
+      }
+      #{$element}__box { background-color: $oc-red-8; }
+    }
+    &.pink {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-pink-7; }
+      }
+      #{$element}__box { background-color: $oc-pink-8; }
+    }
+    &.grape {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-grape-7; }
+      }
+      #{$element}__box { background-color: $oc-grape-8; }
+    }
+    &.violet {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-violet-7; }
+      }
+      #{$element}__box { background-color: $oc-violet-8; }
+    }
+    &.indigo {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-indigo-7; }
+      }
+      #{$element}__box { background-color: $oc-indigo-8; }
+    }
+    &.blue {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-blue-7; }
+      }
+      #{$element}__box { background-color: $oc-blue-8; }
+    }
+    &.cyan {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-cyan-7; }
+      }
+      #{$element}__box { background-color: $oc-cyan-8; }
+    }
+    &.teal {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-teal-7; }
+      }
+      #{$element}__box { background-color: $oc-teal-8; }
+    }
+    &.green {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-green-7; }
+      }
+      #{$element}__box { background-color: $oc-green-8; }
+    }
+    &.lime {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-lime-7; }
+      }
+      #{$element}__box { background-color: $oc-lime-8; }
+    }
+    &.yellow {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-yellow-7; }
+      }
+      #{$element}__box { background-color: $oc-yellow-8; }
+    }
+    &.orange {
+      @include breakpoints-min(lg) {
+        &:hover { color: $oc-orange-7; }
+      }
+      #{$element}__box { background-color: $oc-orange-8; }
+    }
+  }
+}

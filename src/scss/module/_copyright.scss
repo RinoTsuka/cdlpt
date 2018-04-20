@@ -1,0 +1,13 @@
+.copyright {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", 'Segoe UI', Arial, sans-serif;
+  small {
+    font-size: $font-size;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

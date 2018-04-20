@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  transition: 0.3s;
+  border-radius: 999px;
+  border: 1px solid $theme-color-4;
+  text-decoration: none;
+  margin-bottom: $gutter * 0.75;
+  padding: #{$gutter * 0.75} #{$gutter * 1.5};
+  &:active {
+    background-color: $theme-color-4;
+    color: #fff;
+  }
+  @include breakpoints-min(md) {
+    &:hover {
+      background-color: $theme-color-4;
+      color: #fff;
+    }
+  }
+}

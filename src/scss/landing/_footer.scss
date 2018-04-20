@@ -1,0 +1,18 @@
+.footer {
+  background-color: $theme-color-4;
+  text-align: center;
+  color: $theme-color-2;
+  padding-top: $gutter * 4;
+  padding-bottom: $gutter * 4;
+  @include breakpoints-min(md) {
+    padding-top: $gutter * 5;
+    padding-bottom: $gutter * 5;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

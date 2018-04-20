@@ -1,0 +1,6 @@
+material/
+node_modules/
+docs/
+!/src/docs/
+/img/private/
+cdlpt.zip

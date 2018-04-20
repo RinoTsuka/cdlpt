@@ -1,0 +1,132 @@
+$sns-item-size: $gutter * 3;
+$sns-item-size-md: $gutter * 2.5;
+
+.sns {
+  $element: &;
+  display: flex;
+  margin-top: $gutter * 2;
+  justify-content: center;
+  @include breakpoints-min(sm) {
+    justify-content: flex-start;
+    order: 0;
+    margin-top: $gutter * 1.5;
+  }
+  &__item {
+    width: $sns-item-size;
+    margin-right: $gutter * 0.75;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @include breakpoints-min(md) {
+      margin-right: $gutter * 0.25;
+    }
+  }
+  &__link {
+    display: block;
+    order: 1;
+    position: relative;
+    z-index: 1;
+    transition: 0.1s;
+    border-radius: 50%;
+    border: 1px solid $oc-gray-3;
+    background-color: #fff;
+    width: $sns-item-size;
+    height: $sns-item-size;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    &:active {
+      #{$element}__tooltip {
+        pointer-events: auto;
+        top: - $gutter * 3.125;
+        opacity: 1;
+      }
+    }
+    @include breakpoints-min(md) {
+      width: $sns-item-size-md;
+      height: $sns-item-size-md;
+      &::before,
+      &::after {
+        content: "";
+        box-sizing: content-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.4s;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+      &::before {
+        background-color: $theme-color-2;
+      }
+      &::after {
+        background-color: #fff;
+      }
+      &:hover {
+        &::before {
+          border: 1px solid $theme-color-2;
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+        }
+      }
+    }
+    @include breakpoints-min(lg) {
+      &:active {
+        #{$element}__tooltip {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    width: $gutter * 1.25;
+    @include breakpoints-min(md) {
+      width: $gutter;
+    }
+    &.pixiv {}
+    &.twitter {}
+    &.tumblr {
+      width: 12px;
+      @include breakpoints-min(md) {
+        width: 11px;
+      }
+    }
+    &.instagram {
+    }
+    &.facebook {
+      width: 10px;
+      @include breakpoints-min(md) {
+        width: 9px;
+      }
+    }
+  }
+  &__tooltip {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: - $gutter * 2.25;
+    transform: translateX(-50%);
+    transition: 0.4s;
+    opacity: 0;
+    border-radius: 5px;
+    background-color: $oc-gray-9;
+    font-size: 14px;
+    letter-spacing: 0.0125em;
+    color: #fff;
+    padding: #{$gutter * 0.375} #{$gutter * 0.875};
+    &::before{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      border: 6px solid transparent;
+      border-top: 6px solid $oc-gray-9;
+      margin-left: -6px;
+    }
+  }
+}

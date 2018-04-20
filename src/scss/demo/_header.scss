@@ -1,0 +1,14 @@
+.header {
+  &__heading {
+    a {
+      transition: 0.3s;
+      text-decoration: none;
+      color: $color;
+      @include breakpoints-min(sm) {
+        &:hover {
+          color: $oc-cyan-6;
+        }
+      }
+    }
+  }
+}

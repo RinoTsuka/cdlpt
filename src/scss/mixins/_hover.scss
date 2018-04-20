@@ -1,0 +1,20 @@
+@mixin hover($tap-highlight:false) {
+  @if $tap-highlight == false {
+    &.hover,
+    &.focus {
+      -webkit-tap-highlight-color: transparent;
+      @content;
+    }
+  } @else {
+    &.hover,
+    &.focus {
+      @content;
+    }
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    &:hover,
+    &.focus {
+      @content;
+    }
+  }
+}

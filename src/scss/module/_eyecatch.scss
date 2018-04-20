@@ -1,0 +1,33 @@
+.eyecatch {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  @include breakpoints-min(sm) {
+    display: flex;
+  }
+  @include breakpoints-min(lg) {
+    height: 500px;
+  }
+  @include breakpoints-min(xxl) {
+    height: 650px;
+  }
+  &__img {
+    display: block;
+    min-width: 150%;
+    @include breakpoints-min(sm) {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+  h1 {
+    position: absolute;
+    bottom: $gutter * 1.5;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 160px;
+    }
+  }
+}
