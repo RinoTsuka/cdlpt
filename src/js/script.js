@@ -1,6 +1,6 @@
 // copyright
 $(function() {
-  $('.footer').append('<div class="credit"><p>Template designed by <a href="https://sora-maru.jp/" target="_blank">sora-maru</a></p></div>');
+  $('.footer').append('<div class="credit"><p>Template designed by <a href="//sora-maru.jp/" target="_blank">sora-maru</a></p></div>');
 });
 // hover
 $(function() {
