@@ -1,6 +1,6 @@
 {
   "name": "cdlpt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CDのランディングページ向けHTML・CSSテンプレート『CDLPT』のデモサイトです。",
   "main": "gulpfile.js",
   "scripts": {
